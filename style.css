@@ -5,7 +5,7 @@
 html,
 body {
   height: 100%;
-  background-color: #eee;
+  background-color: #84d2f6;
 }
 
 html,
@@ -40,8 +40,25 @@ buttons {
   left: -200px;
   overflow: auto;
   z-index: 2;
-  background-color: #fff;
+  background-color: #212121;
   transition: transform 0.2s;
+
+}
+.mui--text-title, h3 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color:#84d2f6;
+}
+
+.mui--text-body1 {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.mui--text-justify {
+  text-align: justify !important;
 }
 
 #content-wrapper {
@@ -97,7 +114,73 @@ buttons {
   }
 }
 
+a {
+  color: #84d2f6;
+  text-decoration: none;
+}
 
+a:hover, a:focus {
+color: #fef5a0;
+  text-decoration: none;
+}
+
+
+
+.mui-col-xs-6 {
+  width: 50%;
+}
+.mui-col-xs-1, .mui-col-xs-2, .mui-col-xs-3, .mui-col-xs-4, .mui-col-xs-5, .mui-col-xs-6, .mui-col-xs-7, .mui-col-xs-8, .mui-col-xs-9, .mui-col-xs-10, .mui-col-xs-11, .mui-col-xs-12 {
+  float: left;
+}
+
+.mui-row {
+  margin-left: -30px;
+  margin-right: -30px;
+}
+.mui-panel {
+  padding: 0px;
+  margin-bottom: 1.25rem;
+  border-radius: 0;
+  background-color: #212121;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0px 2px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+.mui--z2 {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.mui--pull-right {
+  float: right !important;
+  margin-right: 15px;
+}
+
+.mui-divider {
+  display: block;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.mui-btn--primary {
+  color: #fef5a0;
+  background-color: #434343;
+}
+
+.mui--text-button {
+  font-weight: 300;
+  font-size: 0.700rem;
+  line-height: 1.125rem;
+  text-transform: uppercase;
+}
+
+.mui-btn--primary:hover, .mui-btn--primary:focus, .mui-btn--primary:active {
+  color: #fef5a0;
+  background-color: #212121;
+}
+.mui-btn--primary .mui-ripple {
+  background-color: #84d2f6;
+}
 /**
  * Toggle Sidedrawer
  */
@@ -111,7 +194,7 @@ buttons {
  */
 
 .sidedrawer-toggle {
-  color: #fff;
+  color: #84d2f6;
   cursor: pointer;
   font-size: 20px;
   line-height: 20px;
@@ -119,7 +202,7 @@ buttons {
 }
 
 .sidedrawer-toggle:hover {
-  color: #fff;
+  color: #fef5a0;
   text-decoration: none;
 }
 
@@ -151,7 +234,7 @@ buttons {
 }
 
 #sidedrawer strong:hover {
-  background-color: #E0E0E0;
+  background-color: #434343;
 }
 
 #sidedrawer strong + ul > li {

@@ -7,7 +7,16 @@ body {
   height: 100%;
   background-color: #84d2f6;
 }
-
+#lottie{
+    background-color: #e6dab9
+    width:100%;
+    height:100%;
+    display:block;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    text-align: center;
+    opacity: 1;
+}
 html,
 body,
 input,
@@ -17,6 +26,19 @@ buttons {
   -moz-osx-font-smoothing: grayscale;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
+
+
+    #lottie{
+        background-color: #e6dab9
+        width:100%;
+        height:100%;
+        display:block;
+        overflow: hidden;
+        transform: translate3d(0,0,0);
+        text-align: center;
+        opacity: 1;
+    }
+
 
 
 /**

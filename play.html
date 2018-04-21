@@ -13,11 +13,11 @@
 
 
 </head>
-<style>
+<!--<style>
 body {
   background-color: #e6dab9
 }
-</style>
+</style>-->
       <body>
         <div id="sidedrawer" class="mui--no-user-select">
           <div id="sidedrawer-brand" class="mui--appbar-line-height">
@@ -44,24 +44,14 @@ body {
 
 
 <script src="lottie.js"></script>
-        <div id="lottie"></div>
+        <div id="lottie" style="height: 530px"> </div>
 
-        <!--<script>
+<div class="mui-row"style="text-align:center">
+  <button class="mui-btn mui-btn--primary">Drums</button>
+  <button class="mui-btn mui-btn--primary">bass</button>
+  <button class="mui-btn mui-btn--primary">keys</button>
 
-            var params = {
-                container: document.getElementById('lottie'),
-                renderer: 'svg/canvas/html',
-                loop: true,
-                autoplay: true,
-                animationData: animationData
-                path:'data.JSON'
-            };
-
-            var anim;
-
-            anim = lottie.loadAnimation(params);
-
-        </script>-->
+</div>
         <script>
         var animation = bodymovin.loadAnimation({
   container: document.getElementById('lottie'), // Required
@@ -69,10 +59,9 @@ body {
   renderer: 'svg/canvas/html', // Required
   loop: true, // Optional
   autoplay: true, // Optional
-  
+
 })
 
 </script>
-
       </body>
     </html>

@@ -39,10 +39,12 @@
         </header>
         <body>
             <div class="mui--appbar-height"></div>
-            <img src="Images/BiographyImage-01.jpg" style="width:100%">
+            <script src="lottie.js"></script>
+                    <div id="lottie" style="height: 400px"><img src="Images/BiographyImage-01.jpg" style="width:100%"> </div>
+            <!--img src="Images/BiographyImage-01.jpg" style="width:100%">-->
 
-          <div class="mui-panel">
-            <div class="mui--text-body1; mui--text-justify" style="color:#84d2f6;padding: 15px">
+          <!--<div class="mui-panel">-->
+            <div class="mui--text-body1; mui--text-justify" style="color:#212121;padding: 15px">
               <p>French Fries are a Jazz-Funk outfit from Tomsk in Russia. They're best known in funk circles as the pioneers of the Baltic Funk Movement of the 80's. Founded in 1979 by lifelong friends, drummer Yaroslav Fedorov and bassist Marat Ivanov. The band enjoyed moderate success in Russia but never broke America and the UK (although they had an underground following in the UK thanks to Radio One's John Peel).</p>
 
               <br>
@@ -51,7 +53,17 @@
               <br>
               <p> Thankfully, 31 years later, they've reformed the band with the original lineup and are raring to go. They have a new album in the pipeline and hope to introduce their brand of Baltic Funk to a new generation of fans. "These days the kids are always on their phones", muses Yaroslav, "We thought we'd try and get our music out there with an app, these kids listen to music on their phone, I prefer vinyl, but we must keep up with the times, hence our app."</p>
             </div>
-          </div>
+          <!--</div>-->
+          <script>
+          var animation = bodymovin.loadAnimation({
+    container: document.getElementById('lottie'), // Required
+    path: 'data1.json', // Required
+    renderer: 'svg/canvas/html', // Required
+    loop: false, // Optional
+    autoplay: true, // Optional
 
+  })
+
+  </script>
       </body>
     </html>

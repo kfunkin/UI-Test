@@ -41,39 +41,39 @@ var app = {
 
         if( window.plugins && window.plugins.NativeAudio ) {
 
-            var items = ['bass', 'snare', 'highhat', 'bongo'];
-            for(var i=0; i<items.length; i++) {
-                var asset = 'assets/' + items[i] + '.mp3';
-                window.plugins.NativeAudio.preloadSimple(items[i], 
-                                                         asset, 
-                                                         function(msg){console.info(msg)}, 
-                                                         function(msg){ console.error( 'Error: ' + msg ); });
-            }
+            //var items = ['bass', 'snare', 'highhat', 'bongo'];
+            //for(var i=0; i<items.length; i++) {
+              //  var asset = 'audio/' + items[i] + '.mp3';
+                //window.plugins.NativeAudio.preloadSimple(items[i],
+                                                        // asset,
+                                                        // function(msg){console.info(msg)},
+                                                        // function(msg){ console.error( 'Error: ' + msg ); });
+            //}
 
-            window.plugins.NativeAudio.preloadComplex('noise', 
-                                                      'assets/ambient.mp3', 
-                                                      1, // volume
-                                                      1, // voices
-                                                      0, // delay
+            window.plugins.NativeAudio.preloadComplex('logo',
+                                                      'audio/LogoAudio.mp3',
+                                                      2, // volume
+                                                      //1, // voices
+                                                      //0, // delay
             function(msg) {
-                console.info(msg); 
-                window.plugins.NativeAudio.play('noise', 
-                                                function(msg){console.info(msg)}, 
-                                                function(msg){ console.error( 'Error: ' + msg ); }, 
+                console.info(msg);
+                window.plugins.NativeAudio.play('logo',
+                                                function(msg){console.info(msg)},
+                                                function(msg){ console.error( 'Error: ' + msg ); },
                                                 function(msg){ console.error( 'Complete: ' + msg ); });
-            }, 
+            },
                                                       function(msg){ alert( 'Error: ' + msg ); });
 
         }
 
     },
 
-    play: function(drum) {
-        document.getElementById(drum).classList.add('touched');
-        window.plugins.NativeAudio.play(drum, 
-                                        function(msg){console.info(msg), document.getElementById(drum).classList.remove('touched');},
-                                        function(msg){ console.error( 'Error: ' + msg ); });
-    }
+    //play: function(drum) {
+        //document.getElementById(drum).classList.add('touched');
+        //window.plugins.NativeAudio.play(drum,
+                                      //  function(msg){console.info(msg), document.getElementById(drum).classList.remove('touched');},
+                                        //function(msg){ console.error( 'Error: ' + msg ); });
+    //}
 
 
 };

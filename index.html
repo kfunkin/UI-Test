@@ -10,6 +10,16 @@
     <script src="mui.min.js"></script>
     <script src="jquery-3.3.1.min.js"></script>
     <script src="script.js"></script>
+<script>
+if( window.plugins && window.plugins.NativeAudio ) {
+  window.plugins.NativeAudio.preloadComplex( 'logo', 'audio/LogoAudio.mp3', 1, 1, 0,
+      function(msg){
+          window.plugins.NativeAudio.play( 'logo' );
+      }, function(msg){
+         alert( 'error: ' + msg );
+      });
+    }
+    </script>
   </head>
 
 <body>
@@ -39,27 +49,46 @@
           <!--<div class="mui--appbar-height"></div>-->
           <script src="lottie.js"></script>
                   <div id="lottie"style="height: 360px"> </div>
+</div>
 
-        </div>
+
+
 <div class="mui-container" style="text-align:center">
         <a href="play.html"><button class="mui-btn mui-btn--primary"><div class="mui--text-button" style="text-align: center">GO!</div></button></a>
 </div>
-        <!--<footer id="footer">
-          <div class="mui-container-fluid">
-            <br>
-            Made with ♥ by <a href="https://www.muicss.com">MUI</a>
-          </div>
-        </footer>-->
-      </body>
-      <script>
+
+<!--<audio src="audio/LogoAudio.mp3" autoplay></audio>-->
+
+</body>
+
+
+<script>
       var animation = bodymovin.loadAnimation({
 container: document.getElementById('lottie'), // Required
 path: 'data2.json', // Required
 renderer: 'svg/canvas/html', // Required
 loop: false, // Optional
 autoplay: true, // Optional
+});
 
-})
+
+//if( window.plugins && window.plugins.NativeAudio ) {
+  //window.plugins.NativeAudio.preloadComplex( 'logo', 'audio/LogoAudio.mp3', 1, 1, 0,
+      //function(msg){
+          //window.plugins.NativeAudio.play( 'logo' );
+      //}, function(msg){
+         //alert( 'error: ' + msg );
+      //});
+  //window.plugins.NativeAudio.preloadComplex( 'logo', 'audio/LogoAudio.mp3', function(msg){
+    //}, function(msg){
+        //console.log( 'error: ' + msg );
+//window.plugins.NativeAudio.play( 'logo' );
+//});
+
 
 
 </script>
+
+
+
+ </html>

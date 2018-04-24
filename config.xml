@@ -13,5 +13,5 @@
   </description>
 
 <platform name="android" />
-
+<plugin name="cordova-plugin-nativeaudio" source="npm"/>
 </widget>

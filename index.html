@@ -10,32 +10,17 @@
     <script src="mui.min.js"></script>
     <script src="jquery-3.3.1.min.js"></script>
     <script src="script.js"></script>
-<script>
-if( window.plugins && window.plugins.NativeAudio ) {
 
-  window.plugins.NativeAudio.preloadSimple( 'logo', 'audio/LogoAudio.mp3', function(msg){
-    }, function(msg){
-        console.log( 'error: ' + msg );
-    });
-
-
-    // Play
-    window.plugins.NativeAudio.play( 'logo' );
-
-
-    // Stop multichannel clip after 60 seconds
-    window.setTimeout( function(){
-
-        window.plugins.NativeAudio.stop( 'logo' );
-
-        window.plugins.NativeAudio.unload( 'logo' );
-
-    }, 1000 * 60 );
-}
-    </script>
   </head>
 
 <body>
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript">
+      app.initialize();
+  </script>
+
+
         <div id="sidedrawer" class="mui--no-user-select">
           <div id="sidedrawer-brand" class="mui--appbar-line-height">
             <span class="mui--text-title">We Funk</span>

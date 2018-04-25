@@ -41,14 +41,14 @@ var app = {
 
         if( window.plugins && window.plugins.NativeAudio ) {
 
-          //  var items = ['logo'];
-            //for(var i=0; i<items.length; i++) {
-                //var asset = 'audio/' + items[i] + '.mp3';
-                //window.plugins.NativeAudio.preloadSimple(items[i],
-                                                         //asset,
-                                                         //function(msg){console.info(msg)},
-                                                         //function(msg){ console.error( 'Error: ' + msg ); });
-            //}
+          var items = ['logo'];
+            for(var i=0; i<items.length; i++) {
+                var asset = 'audio/' + items[i] + '.mp3';
+                window.plugins.NativeAudio.preloadSimple(items[i],
+                                                         asset,
+                                                         function(msg){console.info(msg)},
+                                                         function(msg){ console.error( 'Error: ' + msg ); });
+            }
 
             window.plugins.NativeAudio.preloadComplex('logo',
                                                       'audio/LogoAudio.mp3',

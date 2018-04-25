@@ -74,35 +74,21 @@ bindEvents: function() {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-if( window.plugins && window.plugins.NativeAudio ) {
+      window.plugins.NativeAudio.preloadComplex('logo',
+                                                'audio/LogoAudio.mp3',
+                                                1, // volume
+                                                1, // voices
+                                                0, // delay
+      function(msg) {
+          console.info(msg);
+          window.plugins.NativeAudio.play('logo',
+                                          function(msg){console.info(msg)},
+                                          function(msg){ console.error( 'Error: ' + msg ); },
+                                          function(msg){ console.error( 'Complete: ' + msg ); });
+      },
+                                                function(msg){ alert( 'Error: ' + msg ); });
 
-    // Preload audio resources
-    //window.plugins.NativeAudio.preloadComplex( 'music', 'audio/music.mp3', 1, 1, 0, function(msg){
-    //}, function(msg){
-        //console.log( 'error: ' + msg );
-    //});
-
-    window.plugins.NativeAudio.preloadComplex( 'logo', 'audio/LogoAudio.mp3', function(msg){
-    }, function(msg){
-        console.log( 'error: ' + msg );
-    });
-
-
-    // Play
-    window.plugins.NativeAudio.play( 'logo' );
-    //window.plugins.NativeAudio.loop( 'music' );
-
-
-    // Stop multichannel clip after 60 seconds
-    window.setTimeout( function(){
-
-        window.plugins.NativeAudio.stop( 'logo' );
-
-        window.plugins.NativeAudio.unload( 'logo' );
-        //window.plugins.NativeAudio.unload( 'click' );
-
-    }, 1000 * 60 );
-}
+  }
 </script>
 <!--<audio src="audio/LogoAudio.mp3" autoplay></audio>-->
 

@@ -74,17 +74,17 @@ if( window.plugins && window.plugins.NativeAudio ) {
 
 
     // Play
-    window.plugins.NativeAudio.play( 'click' );
-    window.plugins.NativeAudio.loop( 'music' );
+    window.plugins.NativeAudio.play( 'logo' );
+    //window.plugins.NativeAudio.loop( 'music' );
 
 
     // Stop multichannel clip after 60 seconds
     window.setTimeout( function(){
 
-        window.plugins.NativeAudio.stop( 'music' );
+        window.plugins.NativeAudio.stop( 'logo' );
 
-        window.plugins.NativeAudio.unload( 'music' );
-        window.plugins.NativeAudio.unload( 'click' );
+        window.plugins.NativeAudio.unload( 'logo' );
+        //window.plugins.NativeAudio.unload( 'click' );
 
     }, 1000 * 60 );
 }

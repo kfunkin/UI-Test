@@ -14,6 +14,8 @@
     <script type="text/javascript" src="cordova.js"></script>
     <!--<script type="text/javascript" src="index.js"></script>-->
     <script type="text/javascript" src="nativeaudio.js"></script>
+    <script type="text/javascript" src="nativeaudio-browser.js"></script>
+    <script type="text/javascript" src="hotjs-audio.js"></script>
     <script type="text/javascript">
         app.initialize();
     </script>
@@ -67,7 +69,7 @@ if( window.plugins && window.plugins.NativeAudio ) {
         //console.log( 'error: ' + msg );
     //});
 
-    window.plugins.NativeAudio.preloadSimple( 'logo', 'audio/LogoAudio.mp3', function(msg){
+    window.plugins.NativeAudio.preloadComplex( 'logo', 'audio/LogoAudio.mp3', function(msg){
     }, function(msg){
         console.log( 'error: ' + msg );
     });
